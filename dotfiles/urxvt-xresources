@@ -1,0 +1,87 @@
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.transparent:          false
+URxvt.fading:               0
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            5000
+URxvt.internalBorder:       7
+URxvt.borderColor:          #0E0C01
+URxvt.lineSpace:            0
+
+! Fonts
+URxvt.allow_bold:           false
+/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
+!!URxvt.font: xft:Droid Sans Mono for Powerline:size=10:antialias=true
+URxvt.font: xft:Literation Mono Powerline:size=10:antialias=true
+!!URxvt*font: xft:Monospace:pixelsize=14
+!!URxvt*boldFont: xft:Monospace:pixelsize=14
+
+! Fix font space
+URxvt*letterSpace: 0
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Perl extensions
+URxvt.perl-ext-common:      default,matcher
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          firefox
+
+! Cursor
+URxvt.cursorBlink:          false
+URxvt.cursorColor:          #605E3A
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
+
+*background: #1A180A
+*foreground: #B5AF87
+!*foreground: #657b83
+!!*fading: 40
+*fadeColor: #002b36
+*cursorColor: #93a1a1
+*pointerColorBackground: #586e75
+*pointerColorForeground: #93a1a1
+
+!! black dark/light
+*color0: #000000
+*color8: #090800
+
+!! red dark/light
+*color1: #A82828
+*color9: #590000
+
+!! green dark/light
+*color2: #005520
+*color10: #1D7A40
+
+!! yellow dark/light
+*color3: #363000
+*color11: #A89A28
+
+!! blue dark/light
+*color4: #006350 TODO: Fix dark blue
+*color12: #1C6859
+
+!! magenta dark/light
+*color5: #2A001A
+*color13: #84205D
+
+!! cyan dark/light
+*color6: #004B3A
+*color14: #1A6C5A
+
+!! white dark/light
+*color7: #B5AF87
+*color15: #F0EDD8
+
+!! bold color
+URxvt.colorDB: #A85C28
+URxvt.colorIT: #A85C28
+URxvt.underlineColor: #A85C28
+URxvt.highlightColor: #A85C28
+URxvt.highlightTextColor: #B5AF87
