@@ -1,3 +1,6 @@
+{ colors }:
+with colors;
+''
 URxvt.depth:                32
 URxvt.geometry:             90x30
 URxvt.transparent:          false
@@ -7,7 +10,7 @@ URxvt.fading:               0
 URxvt.loginShell:           true
 URxvt.saveLines:            5000
 URxvt.internalBorder:       7
-URxvt.borderColor:          #0E0C01
+!!URxvt.borderColor:          ${color8}
 URxvt.lineSpace:            0
 
 ! Fonts
@@ -38,50 +41,51 @@ URxvt.cursorUnderline:      false
 ! Pointer
 URxvt.pointerBlank:         true
 
-*background: #1A180A
-*foreground: #B5AF87
+*background: ${color0}
+*foreground: ${color15}
 !*foreground: #657b83
 !!*fading: 40
-*fadeColor: #002b36
-*cursorColor: #93a1a1
-*pointerColorBackground: #586e75
-*pointerColorForeground: #93a1a1
+!!*fadeColor: #002b36
+!!*cursorColor: #93a1a1
+!!*pointerColorBackground: #586e75
+!!*pointerColorForeground: #93a1a1
 
 !! black dark/light
-*color0: #000000
-*color8: #090800
+*color0: ${color0}
+*color8: ${color8}
 
 !! red dark/light
-*color1: #A82828
-*color9: #590000
+*color1: ${color1}
+*color9: ${color9}
 
 !! green dark/light
-*color2: #005520
-*color10: #1D7A40
+*color2: ${color2}
+*color10: ${color10}
 
 !! yellow dark/light
-*color3: #363000
-*color11: #A89A28
+*color3: ${color3}
+*color11: ${color11}
 
 !! blue dark/light
-*color4: #006350 TODO: Fix dark blue
-*color12: #1C6859
+*color4: ${color4}
+*color12: ${color12}
 
 !! magenta dark/light
-*color5: #2A001A
-*color13: #84205D
+*color5: ${color5}
+*color13: ${color13}
 
 !! cyan dark/light
-*color6: #004B3A
-*color14: #1A6C5A
+*color6: ${color6}
+*color14: ${color14}
 
 !! white dark/light
-*color7: #B5AF87
-*color15: #F0EDD8
+*color7: ${color7}
+*color15: ${color15}
 
 !! bold color
-URxvt.colorDB: #A85C28
-URxvt.colorIT: #A85C28
-URxvt.underlineColor: #A85C28
-URxvt.highlightColor: #A85C28
-URxvt.highlightTextColor: #B5AF87
+!!URxvt.colorDB: #A85C28
+!!URxvt.colorIT: #A85C28
+!!URxvt.underlineColor: #A85C28
+!!URxvt.highlightColor: #A85C28
+!!URxvt.highlightTextColor: #B5AF87
+''
