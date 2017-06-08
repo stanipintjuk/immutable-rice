@@ -35,7 +35,11 @@ in
   #boot.plymouth.logo = ./art/boot.png;
   #boot.plymouth.theme = "fade-in";
   
-  fonts.fonts = [pkgs.ubuntu_font_family];
+  fonts.fonts = [
+    pkgs.ubuntu_font_family
+    pkgs.powerline-fonts
+  ];
+
   # Desktop environment
   services = {
     compton = {

@@ -1,14 +1,14 @@
 { pkgs }:
 let 
-  colors = import ./colors.nix;
+  i3colors = import ./i3config/colors.nix;
   
   urxvt-config = 
-    import ./dotfiles/urxvt-xresources { inherit colors; };
+    import ./dotfiles/urxvt-xresources { colors = i3colors; };
 
   urxvt-config-file =
     pkgs.writeTextFile {
       name="urxvt-xresources"; 
-      text=(urxvt-config);
+      text=urxvt-config;
     };
 
 in

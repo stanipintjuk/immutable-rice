@@ -12,7 +12,7 @@ conky.config = {
 	draw_outline = false,
 	draw_shades = false,
 	use_xft = true,
-	font = 'Mono:size=10',
+	font = 'Ubuntu Sans Mono:size=10',
 	gap_y = 50,
 	gap_x = 0,
 	border_inner_margin = 20,
