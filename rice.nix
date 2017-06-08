@@ -1,9 +1,13 @@
 { pkgs, config, ... }:
+
+# NOTE: Change the configuration.nix file to match your system
+# ANOTHER NOTE: Conky configuration will not work if you don't have 8 cpus
+with import ./configuration.nix;
 let 
   # Change this variable to a configurations file with your prefered i3 keymaps.
   # That file must only contain your keymaps and nothing else.
   i3-keys = 
-    builtins.readFile /home/stani/.config/i3/i3config_keys;
+    builtins.readFile i3-keys-path;
 
   urxvt = import ./urxvt/urxvt.nix { inherit pkgs; }; 
   rofi = import ./rofi/rofi.nix { inherit pkgs; terminal = urxvt; };
@@ -23,6 +27,8 @@ let
       name = "technomancer-i3.conf";
       text = i3-config;
     };
+  
+  isVm = config.system.build ? vm;
 in
 {
   # Booting eyecandy
@@ -65,9 +71,9 @@ in
 
   #TODO: remove these
   services.xserver.displayManager.lightdm.autoLogin
-    = if config.system.build ? vm 
+    = if isVm
       then { 
-        user = "stani"; 
+        user = username; 
         enable = true;
       } 
       else 
