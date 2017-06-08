@@ -1,5 +1,5 @@
 { keymaps, terminal, launcher, conky, pkgs, config, wallpaper }:
-let colors = import ./colors.nix; in
+let colors = import ../colors.nix; in
 with colors;
 ''
 set $term ${terminal}

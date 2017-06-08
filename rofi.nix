@@ -1,11 +1,10 @@
 { pkgs }:
 let 
   colors = import ./colors.nix;
-  i3colors = import ./i3config/colors.nix;
   urxvt = import ./urxvt.nix { inherit pkgs; };
 
   rofi-config = import ./dotfiles/rofi.config {
-    colors = i3colors;
+    inherit colors;
     terminal = urxvt;
   };
 
@@ -20,6 +19,4 @@ let
     '';
 
 in
-
-  with colors;
-    pkgs.writeScript "svarog-rofi" roficmd
+  pkgs.writeScript "svarog-rofi" roficmd

@@ -1,6 +1,6 @@
 { pkgs }:
 let
-  colors = import ./i3config/colors.nix;
+  colors = import ./colors.nix;
   textcolor = builtins.replaceStrings ["#"] [""] colors.dark;
 
   conky-config = 
