@@ -39,15 +39,15 @@ conky.config = {
 
 conky.text = [[
 ''${alignc}CPU
-$alignc''${cpubar cpu1 6, 83}
-$alignc''${cpubar cpu2 6, 101}
-$alignc''${cpubar cpu3 6, 113}
-$alignc''${cpubar cpu4 6, 119}
-$alignc''${cpubar cpu5 6, 121}
-$alignc''${cpubar cpu6 6, 119}
-$alignc''${cpubar cpu7 6, 113}
-$alignc''${cpubar cpu8 6, 101}
-$alignc''${membar 6, 83}
+$alignc''${cpubar cpu1 6, 95}
+$alignc''${cpubar cpu2 6, 127}
+$alignc''${cpubar cpu3 6, 146}
+$alignc''${cpubar cpu4 6, 156}
+$alignc''${cpubar cpu5 6, 159}
+$alignc''${cpubar cpu6 6, 156}
+$alignc''${cpubar cpu7 6, 146}
+$alignc''${cpubar cpu8 6, 127}
+$alignc''${membar 6, 95}
 ''${alignc}RAM
 ]];
 ''
