@@ -2,7 +2,7 @@
 ''
 conky.config = {
   double_buffer = true,
-	alignment = 'bottom_middle',
+	alignment = 'top_middle',
 	background = false,
 	border_width = 1,
 	cpu_avg_samples = 2,
@@ -39,15 +39,15 @@ conky.config = {
 
 conky.text = [[
 ''${alignc}CPU
-$alignc''${cpubar cpu1 6, 50}
-$alignc''${cpubar cpu2 6, 125}
-$alignc''${cpubar cpu3 6, 175}
-$alignc''${cpubar cpu4 6, 200}
-$alignc''${cpubar cpu5 6, 200}
-$alignc''${cpubar cpu6 6, 175}
-$alignc''${cpubar cpu7 6, 125}
-$alignc''${cpubar cpu8 6, 50}
+$alignc''${cpubar cpu1 6, 83}
+$alignc''${cpubar cpu2 6, 101}
+$alignc''${cpubar cpu3 6, 113}
+$alignc''${cpubar cpu4 6, 119}
+$alignc''${cpubar cpu5 6, 121}
+$alignc''${cpubar cpu6 6, 119}
+$alignc''${cpubar cpu7 6, 113}
+$alignc''${cpubar cpu8 6, 101}
+$alignc''${membar 6, 83}
 ''${alignc}RAM
-$alignc''${membar 6, 520}
 ]];
 ''
