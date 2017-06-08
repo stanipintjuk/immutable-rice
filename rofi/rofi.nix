@@ -1,15 +1,13 @@
-{ pkgs }:
+{ pkgs, terminal}:
 let 
-  colors = import ./colors.nix;
-  urxvt = import ./urxvt.nix { inherit pkgs; };
+  colors = import ../colors.nix;
 
-  rofi-config = import ./dotfiles/rofi.config {
-    inherit colors;
-    terminal = urxvt;
+  rofi-config = import ./rofi-conf.nix {
+    inherit colors terminal;
   };
 
   rofi-config-file = pkgs.writeTextFile {
-    name = "svorag-rofi.config";
+    name = "technomancer-rofi.config";
     text = rofi-config;
   };
 

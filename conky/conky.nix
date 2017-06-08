@@ -1,10 +1,10 @@
 { pkgs }:
 let
-  colors = import ./colors.nix;
+  colors = import ../colors.nix;
   textcolor = builtins.replaceStrings ["#"] [""] colors.dark;
 
   conky-config = 
-    import ./dotfiles/conky.nix { inherit textcolor; };
+    import ./conky-conf.nix { inherit textcolor; };
 
   conky-config-file =
     pkgs.writeTextFile {

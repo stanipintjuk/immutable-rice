@@ -1,9 +1,9 @@
 { pkgs }:
 let 
-  colors = import ./colors.nix;
+  colors = import ../colors.nix;
   
   urxvt-config = 
-    import ./dotfiles/urxvt-xresources { inherit colors; };
+    import ./urxvt-conf.nix{ inherit colors; };
 
   urxvt-config-file =
     pkgs.writeTextFile {

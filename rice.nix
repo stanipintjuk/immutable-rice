@@ -5,9 +5,9 @@ let
   i3-keys = 
     builtins.readFile /home/stani/.config/i3/i3config_keys;
 
-  urxvt = import ./urxvt.nix { inherit pkgs; }; 
-  rofi = import ./rofi.nix { inherit pkgs; };
-  conky = import ./conky.nix { inherit pkgs; };
+  urxvt = import ./urxvt/urxvt.nix { inherit pkgs; }; 
+  rofi = import ./rofi/rofi.nix { inherit pkgs; terminal = urxvt; };
+  conky = import ./conky/conky.nix { inherit pkgs; };
   wallpaper = pkgs.copyPathToStore ./art/the-technomancer.png;
 
   i3-config = 
