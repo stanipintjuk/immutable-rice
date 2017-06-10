@@ -27,19 +27,16 @@ let
       name = "technomancer-i3.conf";
       text = i3-config;
     };
+
+  gtk2-theme = import ./paper-gtk2-theme.nix pkgs;
   
   isVm = config.system.build ? vm;
 in
 {
-  # Booting eyecandy
-  #boot.loader.grub.splashImage = ./art/grub.png;
-  #boot.loader.grub.gfxmodeEfi = "1920x1080";
 
-  #boot.kernelParams = [ "quiet" "vga=current" "vt.global_cursor_default=0" ];
-
-  #boot.plymouth.enable = true;
-  #boot.plymouth.logo = ./art/boot.png;
-  #boot.plymouth.theme = "fade-in";
+  imports = [ 
+    gtk2-theme
+  ];
   
   fonts.fonts = [
     pkgs.ubuntu_font_family
@@ -80,19 +77,4 @@ in
         {};
 
   services.xserver.windowManager.default = "i3";
-    
-  # Gtk themes and iconpacks
-  #services.xserver.displayManager.lightdm.greeters.gtk = {
-  #  theme.name = "Numix";
-  #  theme.package = pkgs.numix-gtk-theme;
-  #  iconTheme.name = "Faba";
-  #  iconTheme.package = pkgs.faba-icon-theme;
-  #};
-
-  #environment.systemPackages = with pkgs; [
-  #  faba-icon-theme
-  #  numix-gtk-theme
-  #  numix-icon-theme-circle
-  #  lxappearance
-  #];
 }
