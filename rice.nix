@@ -15,7 +15,7 @@ let
   wallpaper = pkgs.copyPathToStore ./art/the-technomancer.png;
 
   i3-config = 
-    import ./i3config/i3config.nix {
+    import ./i3wm/i3config.nix {
       keymaps = i3-keys;
       terminal = urxvt;
       launcher = rofi;
@@ -77,4 +77,6 @@ in
         {};
 
   services.xserver.windowManager.default = "i3";
+
+  environment.systemPackages = [ pkgs.dunst ];
 }

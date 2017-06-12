@@ -51,6 +51,7 @@ bar {
 }
 
 for_window [class="URxvt"] border pixel 5
+for_window [class="vlc"] border pixel 5
 for_window [class="Firefox"] border pixel 5
 
 #TODO: remove these
