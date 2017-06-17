@@ -78,5 +78,5 @@ in
 
   services.xserver.windowManager.default = "i3";
 
-  environment.systemPackages = [ pkgs.dunst ];
+  environment.systemPackages = [ pkgs.dunst pkgs.ubuntu_font_family ];
 }

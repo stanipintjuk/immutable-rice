@@ -10,7 +10,7 @@ rofi.lines:                          5
 ! "Number of columns" Set from: Default
 ! rofi.columns:                        1
 ! "Font to use" Set from: Default
-rofi.font: Ubuntu Sans Mono 12
+rofi.font: Ubuntu Mono 12
 ! "Color scheme for normal row" Set from: Default
 rofi.color-normal: ${dark}, ${light}, ${dark}, ${dark}, ${accent}
 ! "Color scheme for urgent row" Set from: Default
