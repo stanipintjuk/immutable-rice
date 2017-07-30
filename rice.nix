@@ -16,7 +16,7 @@ let
 
   i3-config = 
     import ./i3wm/i3config.nix {
-      keymaps = i3-keys;
+      config-extra = i3-config-extra;
       terminal = urxvt;
       launcher = rofi;
       inherit pkgs conky config wallpaper;
