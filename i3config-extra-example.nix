@@ -1,10 +1,11 @@
+{ pkgs, ...}:
+''
 set $mod Mod1
 
 floating_modifier $mod
 
-# NOTE: Use $launcher for the launcher and $term for the terminal
-bindsym $mod+d exec $launcher
-bindsym $mod+Return exec $term
+bindsym $mod+o exec $launcher
+bindsym $mod+t exec $term
 bindsym $mod+Shift+q kill
 
 # change focus
@@ -51,7 +52,6 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# NOTE: Workspaces are defined in the rice so use these workspace variables
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
@@ -76,7 +76,13 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
-# reload the configuration file
+# volume control
+bindsym XF86AudioLowerVolume exec amixer -q sset Master 3%-
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master 3%+
+
+# connect to my bt headset
+bindsym $mod+Shift+F12 exec echo "connect 00:16:94:1B:01:D8" | bluetoothctl
+bindsym $mod+F12 exec echo "disconnect 00:16:94:1B:01:D8" | bluetoothctl
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -109,4 +115,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+bindsym $mod+Control+l exec ${pkgs.i3lock-fancy}/bin/i3lock-fancy
 focus_follows_mouse no
+
+exec --no-startup-id telegram-desktop
+exec --no-startup-id pidgin
+''
