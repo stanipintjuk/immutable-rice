@@ -1,11 +1,12 @@
-{ pkgs, ...}:
+{ pkgs, rofi, terminal, ...}:
 ''
 set $mod Mod1
 
 floating_modifier $mod
 
-bindsym $mod+o exec $launcher
-bindsym $mod+t exec $term
+bindsym $mod+o exec ${rofi} -show run
+bindsym $mod+p exec ${rofi} -show ssh
+bindsym $mod+t exec ${terminal}
 bindsym $mod+Shift+q kill
 
 # change focus
@@ -118,6 +119,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+Control+l exec ${pkgs.i3lock-fancy}/bin/i3lock-fancy
 focus_follows_mouse no
 
-exec --no-startup-id telegram-desktop
-exec --no-startup-id pidgin
+exec --no-startup-id ${pkgs.tdesktop}/bin/telegram-desktop
+exec --no-startup-id ${pkgs.pidgin}/bin/pidgin
 ''

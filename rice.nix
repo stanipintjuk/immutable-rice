@@ -18,8 +18,7 @@ let
     import ./i3wm/i3config.nix {
       config-extra = i3-config-extra;
       terminal = urxvt;
-      launcher = rofi;
-      inherit pkgs conky config wallpaper;
+      inherit rofi pkgs conky config wallpaper;
     };
 
   i3-config-file =

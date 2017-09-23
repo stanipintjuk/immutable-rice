@@ -13,7 +13,7 @@ let
 
   roficmd = 
     ''
-      ${pkgs.coreutils}/bin/env XENVIRONMENT=${rofi-config-file} ${pkgs.rofi}/bin/rofi -display-run λ -show run
+      ${pkgs.coreutils}/bin/env XENVIRONMENT=${rofi-config-file} ${pkgs.rofi}/bin/rofi -display-run λ $@
     '';
 
 in

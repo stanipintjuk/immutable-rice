@@ -1,10 +1,7 @@
-{ config-extra, terminal, launcher, conky, pkgs, config, wallpaper }:
+{ config-extra, terminal, rofi, conky, pkgs, config, wallpaper }:
 let colors = import ../colors.nix; in
 with colors;
 ''
-set $term ${terminal}
-set $launcher ${launcher}
-
 set $workspace1 1
 set $workspace2 2
 set $workspace3 3
@@ -64,6 +61,6 @@ ${
 exec --no-startup-id ${pkgs.feh}/bin/feh --bg-fill ${wallpaper}
 exec --no-startup-id ${conky}
 
-${import config-extra {inherit pkgs terminal launcher config wallpaper;}}
+${import config-extra {inherit pkgs terminal rofi config wallpaper;}}
 
 ''
